@@ -9,11 +9,10 @@ for i in range(n):
     end = 0
     for q in quiz[i]:
         if not end and q == 'O':
-            answer += 1
             end = 1
         elif q == 'O':
             end = end + 1
-            answer += end
-        elif q == 'X':
+        else:
             end = 0
+        answer += end
     print(answer)
